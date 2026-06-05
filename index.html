@@ -1,18 +1,10 @@
-// Hi, please dont rename my html pls
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AditzMods Official</title>
-    
-    <link class="image/png" rel="icon" href="https://postimg.cc/gallery/gRP0bzQ">
-    
-    <meta name="google-site-verification" content="VCjFvcjwRyHBhCv36y0ii9Uy8D_71GflAJZaC6a2abo" />
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7331906829190210"
-         crossorigin="anonymous"></script>
-    
+    <link rel="icon" type="image/png" href="https://aditzmods.my.id/logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -333,91 +325,6 @@
             box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
         }
 
-        .search-container {
-            margin-bottom: 20px;
-            position: relative;
-        }
-        .search-input {
-            width: 100%;
-            padding: 14px 16px 14px 46px;
-            background: #020617;
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 14px;
-            color: #f1f5f9;
-            font-size: 0.95rem;
-            outline: none;
-            transition: all 0.3s;
-        }
-        .search-input:focus {
-            border-color: #22d3ee;
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
-        }
-        .search-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #64748b;
-            font-size: 1.1rem;
-        }
-        .script-card {
-            background: rgba(2, 6, 23, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 16px;
-            padding: 18px;
-            margin-bottom: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .script-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-            gap: 10px;
-        }
-        .script-card-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: #f1f5f9;
-        }
-        .script-card-game {
-            font-size: 0.82rem;
-            background: rgba(6, 182, 212, 0.1);
-            color: #22d3ee;
-            padding: 3px 8px;
-            border-radius: 6px;
-            font-weight: 600;
-            border: 1px solid rgba(6, 182, 212, 0.15);
-        }
-        .script-card-meta {
-            font-size: 0.85rem;
-            color: #94a3b8;
-            margin-bottom: 12px;
-            display: flex;
-            gap: 15px;
-        }
-        .script-card-meta span strong {
-            color: #cbd5e1;
-        }
-        .script-list-wrapper {
-            max-height: 550px;
-            overflow-y: auto;
-            padding-right: 5px;
-        }
-        .script-list-wrapper::-webkit-scrollbar {
-            width: 6px;
-        }
-        .script-list-wrapper::-webkit-scrollbar-thumb {
-            background: #1e293b;
-            border-radius: 10px;
-        }
-        .no-results {
-            text-align: center;
-            color: #64748b;
-            padding: 30px 0;
-            font-size: 0.95rem;
-        }
-
         .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.6); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); z-index: 98; display: none; }
         .overlay.active { display: block; }
 
@@ -438,12 +345,11 @@
     <div class="overlay" id="overlay"></div>
     <div class="sidebar" id="sidebar">
         <ul class="sidebar-menu">
-            <li><a data-target="real"><i class="fa-solid fa-user-check"></i> Real AditzMods</a></li>
-            <li><a data-target="whats"><i class="fa-solid fa-circle-info"></i> Whats AditzMods</a></li>
-            <li><a data-target="script"><i class="fa-solid fa-code"></i> AditzMods Script</a></li>
-            <li><a data-target="allRoblox"><i class="fa-solid fa-cubes"></i> All Roblox Function</a></li>
-            <li><a data-target="orderLua"><i class="fa-solid fa-basket-shopping"></i> Order Lua Code</a></li>
-            <li><a data-target="htmlEnc"><i class="fa-solid fa-shield-halved"></i> HTML Obfuscator</a></li>
+            <li><a onclick="showContent('real')"><i class="fa-solid fa-user-check"></i> Real AditzMods</a></li>
+            <li><a onclick="showContent('whats')"><i class="fa-solid fa-circle-info"></i> Whats AditzMods</a></li>
+            <li><a onclick="showContent('script')"><i class="fa-solid fa-code"></i> AditzMods Script</a></li>
+            <li><a onclick="showContent('orderLua')"><i class="fa-solid fa-basket-shopping"></i> Order Lua Code</a></li>
+            <li><a onclick="showContent('htmlEnc')"><i class="fa-solid fa-shield-halved"></i> HTML Obfuscator</a></li>
         </ul>
     </div>
 
@@ -495,10 +401,24 @@
             </div>
             
             <div class="code-container">
-                <div class="code-text" id="scriptCode">loadstring(game:HttpGet("https://pastebin.com/raw/TH201m42", true))()
-</div>
-                <button class="btn-copy" id="btnCopy" onclick="copyDynamicScript('scriptCode', 'btnCopy', 'copyIcon')" title="Copy Code">
+                <div class="code-text" id="scriptCode">loadstring(game:HttpGet("https://pastebin.com/raw/TH201m42", true))()</div>
+                <button class="btn-copy" id="btnCopy" onclick="copyScript('scriptCode', 'btnCopy', 'copyIcon')" title="Copy Code">
                     <i class="fa-solid fa-copy" id="copyIcon"></i>
+                </button>
+            </div>
+
+            <div class="script-divider"></div>
+
+            <h2><i class="fa-solid fa-fire-flame-curved"></i> AditzMods Script V12</h2>
+            <div class="script-meta">
+                <div><i class="fa-solid fa-code-branch"></i> <strong>Version:</strong> 12.00 (Latest)</div>
+                <div><i class="fa-solid fa-bolt"></i> High performance compilation interface.</div>
+            </div>
+            
+            <div class="code-container">
+                <div class="code-text" id="scriptV12Code">loadstring(game:HttpGet("https://pastebin.com/raw/asLLHJi2"))()</div>
+                <button class="btn-copy" id="btnCopyV12" onclick="copyScript('scriptV12Code', 'btnCopyV12', 'copyIconV12')" title="Copy Code">
+                    <i class="fa-solid fa-copy" id="copyIconV12"></i>
                 </button>
             </div>
 
@@ -511,11 +431,8 @@
             </div>
             
             <div class="code-container">
-                <div class="code-text" id="scriptPrivateCode">loadstring(game:HttpGet("https://pastebin.com/raw/rLMFhC8n", true))()
-
-")
-")</div>
-                <button class="btn-copy" id="btnCopyPrivate" onclick="copyDynamicScript('scriptPrivateCode', 'btnCopyPrivate', 'copyIconPrivate')" title="Copy Code">
+                <div class="code-text" id="scriptPrivateCode">loadstring(game:HttpGet("https://pastebin.com/raw/rLMFhC8n", true))()</div>
+                <button class="btn-copy" id="btnCopyPrivate" onclick="copyScript('scriptPrivateCode', 'btnCopyPrivate', 'copyIconPrivate')" title="Copy Code">
                     <i class="fa-solid fa-copy" id="copyIconPrivate"></i>
                 </button>
             </div>
@@ -524,17 +441,6 @@
                 <a href="https://deltaexploits.gg" target="_blank"><i class="fa-solid fa-download"></i> Delta Apk : deltaexploits.gg</a>
                 <a href="https://t.me/aditzmods" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram Channel : @aditzmods</a>
             </div>
-        </div>
-
-        <div id="allRobloxContent" class="content-box">
-            <h2><i class="fa-solid fa-cubes"></i> All Roblox Function</h2>
-            
-            <div class="search-container">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" id="scriptSearch" class="search-input" placeholder="Search script name, game, or developer..." oninput="filterScripts()">
-            </div>
-
-            <div class="script-list-wrapper" id="scriptListContainer"></div>
         </div>
 
         <div id="orderLuaContent" class="content-box">
@@ -555,7 +461,7 @@
             <div class="viewer-container">
                 <p class="sim-text" style="color: #94a3b8; margin-bottom: 5px;">Secure your raw HTML/JS source code so people can't just copy-paste it instantly.</p>
                 
-                <textarea class="lua-textarea" id="htmlInput" style="color: #f472b6; height: 140px;" placeholder="&#10;<h1>My Script Hub</h1>&#10;<script>console.log('AditzMods');</script>"></textarea>
+                <textarea class="lua-textarea" id="htmlInput" style="color: #f472b6; height: 140px;" placeholder=""></textarea>
                 
                 <div class="viewer-controls">
                     <button class="btn-action btn-clear" onclick="clearHtml()"><i class="fa-solid fa-trash-can"></i> Reset</button>
@@ -567,7 +473,7 @@
                 </div>
                 
                 <div class="code-container" style="margin-top: 10px;">
-                    <div class="code-text" id="htmlOutput" style="color: #c084fc; max-height: 120px; overflow-y: auto; white-space: pre-wrap; word-break: break-all;">-- Encrypted output will appear here --</div>
+                    <div class="code-text" id="htmlOutput" style="color: #c084fc; max-height: 120px; overflow-y: auto; white-space: pre-wrap; word-break: break-all;"></div>
                     <button class="btn-copy" id="btnCopyHtml" onclick="copyEncryptedHtml()" title="Copy Encrypted Code">
                         <i class="fa-solid fa-copy" id="copyIconHtml"></i>
                     </button>
@@ -584,152 +490,88 @@
 
         let rawEncryptedOutputText = "";
 
-        const robloxScriptsDatabase = [
-            { name: "Infinite Yield Cmds", game: "Universal Admin Commands", developer: "EdgeIY", loadstring: "local Players = game:GetService('Players')\nlocal LocalPlayer = Players.LocalPlayer\nprint('Infinite Yield Client Side Active for ' .. LocalPlayer.Name)" },
-            { name: "AditzMods Fly V3", game: "Universal", developer: "AditzMods", loadstring: "local LP = game:GetService('Players').LocalPlayer\nlocal Mouse = LP:GetMouse()\nprint('Fly Script Engaged. Press E to Toggle Fly Mode.')" },
-            { name: "Dex Explorer Light", game: "Universal Debugger", developer: "RaspberryPi", loadstring: "local Core = game:GetService('CoreGui')\nif Core:FindFirstChild('Dex') then print('Dex Instance Detected') else print('Initializing Dex Explorer Engine...') end" },
-            { name: "Simple Remote Spy", game: "Universal Remote Spy", developer: "exxtremestuffs", loadstring: "local Log = {}\nsetmetatable(Log, {\n__index = function(t, k) print('Intercepted Remote Call Event:', k) end\n})" }
-        ];
-
-        function renderScripts(data) {
-            const container = document.getElementById('scriptListContainer');
-            container.innerHTML = '';
-
-            if (data.length === 0) {
-                container.innerHTML = '<div class="no-results"><i class="fa-solid fa-folder-open" style="font-size: 1.5rem; display:block; margin-bottom:8px;"></i> No active scripts found.</div>';
-                return;
-            }
-
-            data.forEach((item, index) => {
-                const uniqueId = `dbScriptCode_${index}`;
-                const uniqueBtnId = `dbBtnCopy_${index}`;
-                const uniqueIconId = `dbIcon_${index}`;
-
-                const card = document.createElement('div');
-                card.className = 'script-card';
-                card.innerHTML = `
-                    <div class="script-card-header">
-                        <div class="script-card-title">${item.name}</div>
-                        <div class="script-card-game">${item.game}</div>
-                    </div>
-                    <div class="script-card-meta">
-                        <span><i class="fa-solid fa-user-ninja"></i> Dev: <strong>${item.developer}</strong></span>
-                        <span><i class="fa-solid fa-circle-check" style="color:#10b981;"></i> Status: <strong>100% Active</strong></span>
-                    </div>
-                    <div class="code-container" style="margin: 0; padding: 12px;">
-                        <div class="code-text" id="${uniqueId}">${item.loadstring}</div>
-                        <button class="btn-copy" id="${uniqueBtnId}" style="padding: 8px 12px; border-radius: 8px;" onclick="copyDynamicScript('${uniqueId}', '${uniqueBtnId}', '${uniqueIconId}')">
-                            <i class="fa-solid fa-copy" id="${uniqueIconId}"></i>
-                        </button>
-                    </div>
-                `;
-                container.appendChild(card);
-            });
-        }
-
-        function filterScripts() {
-            const query = document.getElementById('scriptSearch').value.toLowerCase().trim();
-            const filtered = robloxScriptsDatabase.filter(item => 
-                item.name.toLowerCase().includes(query) || 
-                item.game.toLowerCase().includes(query) || 
-                item.developer.toLowerCase().includes(query)
-            );
-            renderScripts(filtered);
-        }
-
-        function toggleSidebarMenu() {
+        menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             sidebar.classList.toggle('active');
             overlay.classList.toggle('active');
-        }
-
-        menuToggle.addEventListener('click', toggleSidebarMenu);
-        overlay.addEventListener('click', toggleSidebarMenu);
-
-        document.querySelectorAll('.sidebar-menu a').forEach(menuLink => {
-            menuLink.addEventListener('click', function(e) {
-                const targetMenu = this.getAttribute('data-target');
-                
-                document.getElementById('realContent').classList.remove('active-box');
-                document.getElementById('whatsContent').classList.remove('active-box');
-                document.getElementById('scriptContent').classList.remove('active-box');
-                document.getElementById('allRobloxContent').classList.remove('active-box');
-                document.getElementById('orderLuaContent').classList.remove('active-box');
-                document.getElementById('htmlEncContent').classList.remove('active-box');
-                
-                document.querySelectorAll('.sidebar-menu a').forEach(link => link.classList.remove('active-menu'));
-
-                if(targetMenu === 'real') document.getElementById('realContent').classList.add('active-box');
-                if(targetMenu === 'whats') document.getElementById('whatsContent').classList.add('active-box');
-                if(targetMenu === 'script') document.getElementById('scriptContent').classList.add('active-box');
-                if(targetMenu === 'allRoblox') {
-                    document.getElementById('allRobloxContent').classList.add('active-box');
-                    renderScripts(robloxScriptsDatabase);
-                }
-                if(targetMenu === 'orderLua') document.getElementById('orderLuaContent').classList.add('active-box');
-                if(targetMenu === 'htmlEnc') document.getElementById('htmlEncContent').classList.add('active-box');
-
-                this.classList.add('active-menu');
-                toggleSidebarMenu();
-            });
         });
 
-        function copyDynamicScript(elementId, btnId, iconId) {
-            const targetElement = document.getElementById(elementId);
-            const textToCopy = targetElement.textContent || targetElement.innerText;
+        overlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        function showContent(menuType) {
+            document.getElementById('realContent').classList.remove('active-box');
+            document.getElementById('whatsContent').classList.remove('active-box');
+            document.getElementById('scriptContent').classList.remove('active-box');
+            document.getElementById('orderLuaContent').classList.remove('active-box');
+            document.getElementById('htmlEncContent').classList.remove('active-box');
             
+            const links = document.querySelectorAll('.sidebar-menu a');
+            links.forEach(link => link.classList.remove('active-menu'));
+
+            if(menuType === 'real') {
+                document.getElementById('realContent').classList.add('active-box');
+            } else if(menuType === 'whats') {
+                document.getElementById('whatsContent').classList.add('active-box');
+            } else if(menuType === 'script') {
+                document.getElementById('scriptContent').classList.add('active-box');
+            } else if(menuType === 'orderLua') {
+                document.getElementById('orderLuaContent').classList.add('active-box');
+            } else if(menuType === 'htmlEnc') {
+                document.getElementById('htmlEncContent').classList.add('active-box');
+            }
+
+            window.event.currentTarget.classList.add('active-menu');
+            
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        function copyScript(elementId, btnId, iconId) {
+            const scriptText = document.getElementById(elementId).innerText;
             const btnCopy = document.getElementById(btnId);
             const copyIcon = document.getElementById(iconId);
 
-            const inputField = document.createElement('textarea');
-            inputField.value = textToCopy;
-            inputField.style.position = 'fixed';
-            inputField.style.opacity = '0';
-            document.body.appendChild(inputField);
-            
-            inputField.focus();
-            inputField.select();
-            inputField.setSelectionRange(0, 99999);
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = scriptText;
+            tempTextArea.style.position = 'absolute';
+            tempTextArea.style.left = '-9999px';
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
 
-            let success = false;
             try {
-                success = document.execCommand('copy');
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(scriptText);
+                } else {
+                    document.execCommand('copy');
+                }
+
+                btnCopy.classList.add('copied');
+                copyIcon.className = 'fa-solid fa-check';
+                setTimeout(() => {
+                    btnCopy.classList.remove('copied');
+                    copyIcon.className = 'fa-solid fa-copy';
+                }, 2000);
             } catch (err) {
-                success = false;
+                alert('Failed to copy text.');
             }
 
-            if (!success && navigator.clipboard) {
-                navigator.clipboard.writeText(textToCopy).then(() => {
-                    triggerCopyAnimation(btnCopy, copyIcon);
-                });
-            } else if (success) {
-                triggerCopyAnimation(btnCopy, copyIcon);
-            } else {
-                alert("Gagal menyalin kode secara otomatis.");
-            }
-
-            document.body.removeChild(inputField);
-        }
-
-        function triggerCopyAnimation(btn, icon) {
-            btn.classList.add('copied');
-            icon.className = 'fa-solid fa-check';
-            setTimeout(() => {
-                btn.classList.remove('copied');
-                icon.className = 'fa-solid fa-copy';
-            }, 2000);
+            document.body.removeChild(tempTextArea);
         }
 
         function clearHtml() {
             document.getElementById('htmlInput').value = '';
-            document.getElementById('htmlOutput').innerText = '-- Encrypted output will appear here --';
+            document.getElementById('htmlOutput').innerText = '';
             rawEncryptedOutputText = "";
         }
 
         function encryptHTML() {
             const rawHtml = document.getElementById('htmlInput').value.trim();
             if(!rawHtml) {
-                alert("Please paste some raw HTML/JS code inside first!");
                 rawEncryptedOutputText = "";
                 return;
             }
@@ -747,45 +589,41 @@
 
         function copyEncryptedHtml() {
             if (!rawEncryptedOutputText) {
-                alert("Please encrypt your HTML code first!");
                 return;
             }
-            
+
             const btnCopy = document.getElementById('btnCopyHtml');
             const copyIcon = document.getElementById('copyIconHtml');
+
+            const storageTextArea = document.createElement('textarea');
+            storageTextArea.value = rawEncryptedOutputText;
+            storageTextArea.setAttribute('readonly', '');
+            storageTextArea.style.position = 'absolute';
+            storageTextArea.style.left = '-9999px';
+            document.body.appendChild(storageTextArea);
             
-            const inputField = document.createElement('textarea');
-            inputField.value = rawEncryptedOutputText;
-            inputField.style.position = 'fixed';
-            inputField.style.opacity = '0';
-            document.body.appendChild(inputField);
-            
-            inputField.focus();
-            inputField.select();
-            inputField.setSelectionRange(0, 99999);
+            storageTextArea.select();
+            storageTextArea.setSelectionRange(0, 99999);
 
             try {
-                document.execCommand('copy');
-                triggerCopyAnimation(btnCopy, copyIcon);
-            } catch (err) {
-                if (navigator.clipboard) {
-                    navigator.clipboard.writeText(rawEncryptedOutputText).then(() => {
-                        triggerCopyAnimation(btnCopy, copyIcon);
-                    });
+                if (navigator.clipboard && window.isSecureContext) {
+                    navigator.clipboard.writeText(rawEncryptedOutputText);
+                } else {
+                    document.execCommand('copy');
                 }
+                
+                btnCopy.classList.add('copied');
+                copyIcon.className = 'fa-solid fa-check';
+                setTimeout(() => {
+                    btnCopy.classList.remove('copied');
+                    copyIcon.className = 'fa-solid fa-copy';
+                }, 2000);
+            } catch (err) {
+                alert('Failed to copy code.');
             }
-            document.body.removeChild(inputField);
+
+            document.body.removeChild(storageTextArea);
         }
-
-        document.addEventListener('contextmenu', event => event.preventDefault());
-
-        document.onkeydown = function(e) {
-            if (e.keyCode == 123) return false; 
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; 
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) return false; 
-            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false; 
-            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; 
-        };
     </script>
 </body>
 </html>
