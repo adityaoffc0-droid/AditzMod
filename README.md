@@ -1,5 +1,4 @@
 # AditzMods Hub
-https://www.image2url.com/r2/default/images/1780633726620-13097ffa-2c22-4f8c-bffc-1c05d325d191.jpg
 [Main Channel](https://t.me/aditzmods)
 [Admin WhatsApp](https://wa.me/6281973858680)
 [Main YouTube](https://youtube.com/@aditzmods)
@@ -14,6 +13,7 @@ Hey, welcome to AditzMods. This is my space where i create and tweak custom scri
 - No cracking allowed: All premium scripts are encrypted for a reason. If you try to reverse engineer or bypass our system, you will get instant auto blacklist from the backend server database.
 - Official source only: Only trust files or scripts dropped inside the official channel at t.me/aditzmods. If you grab it from somewhere else, it is on you if you get logged or generic malware.
 - Respect the work: Dont change the creator tag or re sell my scripts without proper licensing. Let us keep the community clean.
+- Dont Rename HTML Website
 ---
 ## Core Stack
 - Lua Scripting
