@@ -1,14 +1,13 @@
-//dont rename my HTML pls
+//dont rename
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AditzMods Official</title>
-    <link rel="icon" type="image/png" href="https://kommodo.ai/i/ZT6u2HsSI5GdeZntHRvL">
+    <link rel="icon" type="image/png" href="https://www.image2url.com/r2/default/images/1780633726620-13097ffa-2c22-4f8c-bffc-1c05d325d191.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7331906829190210"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7331906829190210" crossorigin="anonymous"></script>
     <style>
         * {
             margin: 0;
@@ -16,7 +15,6 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
-
         body {
             background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
             color: #f1f5f9;
@@ -26,7 +24,6 @@
             align-items: center;
             overflow-x: hidden;
         }
-
         .navbar {
             width: 100%;
             background: rgba(15, 23, 42, 0.6);
@@ -42,7 +39,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
         }
-
         .brand {
             font-size: 1.5rem;
             font-weight: 800;
@@ -54,7 +50,6 @@
             gap: 10px;
             text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
         }
-
         .menu-toggle {
             cursor: pointer;
             display: flex;
@@ -64,7 +59,6 @@
             height: 18px;
             z-index: 101;
         }
-
         .menu-toggle span {
             display: block;
             height: 2.5px;
@@ -73,7 +67,6 @@
             border-radius: 4px;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
         }
-
         .menu-toggle.active span:nth-child(1) {
             transform: translateY(7.5px) rotate(45deg);
         }
@@ -83,7 +76,6 @@
         .menu-toggle.active span:nth-child(3) {
             transform: translateY(-7.5px) rotate(-45deg);
         }
-
         .sidebar {
             position: fixed;
             top: 0;
@@ -99,20 +91,16 @@
             box-shadow: -20px 0 40px rgba(0, 0, 0, 0.8);
             border-left: 1px solid rgba(255, 255, 255, 0.05);
         }
-
         .sidebar.active {
             right: 0;
         }
-
         .sidebar-menu {
             list-style: none;
             padding: 24px;
         }
-
         .sidebar-menu li {
             margin-bottom: 16px;
         }
-
         .sidebar-menu a {
             color: #94a3b8;
             text-decoration: none;
@@ -127,14 +115,12 @@
             cursor: pointer;
             border: 1px solid transparent;
         }
-
         .sidebar-menu a:hover, .sidebar-menu a.active-menu {
             background: linear-gradient(90deg, rgba(6, 182, 212, 0.15) 0%, rgba(6, 182, 212, 0.02) 100%);
             color: #22d3ee;
             border-color: rgba(6, 182, 212, 0.2);
             transform: translateX(8px);
         }
-
         .container {
             margin-top: 110px;
             width: 92%;
@@ -142,20 +128,17 @@
             padding: 20px 5px;
             text-align: center;
         }
-
         .social-section {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 14px;
             margin-bottom: 30px;
         }
-
         @media (max-width: 480px) {
             .social-section {
                 grid-template-columns: 1fr;
             }
         }
-
         .btn-social {
             display: flex;
             align-items: center;
@@ -170,36 +153,31 @@
             transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
-
         .btn-social:hover {
             transform: translateY(-4px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
             filter: brightness(1.15);
         }
-
         .telegram { background: linear-gradient(135deg, #0284c7, #0369a1); border: 1px solid rgba(56, 189, 248, 0.2); }
         .whatsapp { background: linear-gradient(135deg, #16a34a, #15803d); border: 1px solid rgba(74, 222, 128, 0.2); }
         .youtube { background: linear-gradient(135deg, #dc2626, #b91c1c); border: 1px solid rgba(248, 113, 113, 0.2); }
         .youtube-backup { background: linear-gradient(135deg, #db2777, #be185d); border: 1px solid rgba(244, 114, 182, 0.2); }
-
         .content-box {
             background: rgba(15, 23, 42, 0.45);
             border: 1px solid rgba(255, 255, 255, 0.05);
             padding: 30px;
             border-radius: 24px;
             margin-top: 15px;
-            display: none; 
+            display: none;
             animation: cubicBezierFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
             text-align: left;
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
-
         .content-box.active-box {
             display: block;
         }
-
         .content-box h2 {
             color: #22d3ee;
             margin-bottom: 22px;
@@ -211,7 +189,6 @@
             align-items: center;
             gap: 12px;
         }
-
         .real-info { font-size: 1.1rem; line-height: 1.8; }
         .real-info strong {
             color: #f59e0b; background: rgba(245, 158, 11, 0.1);
@@ -220,11 +197,9 @@
             font-family: monospace; letter-spacing: 0.5px;
         }
         .highlight-text { display: block; text-align: center; margin-top: 20px; font-weight: bold; color: #10b981; font-size: 1.2rem; text-shadow: 0 0 15px rgba(16, 185, 129, 0.3); }
-
         .whats-info { font-size: 1rem; line-height: 1.7; color: #cbd5e1; }
         .whats-info p { margin-bottom: 14px; }
         .tag-script { display: inline-block; background: rgba(34, 211, 238, 0.1); color: #22d3ee; border: 1px solid rgba(34, 211, 238, 0.2); padding: 3px 10px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; }
-
         .script-meta { margin-bottom: 20px; font-size: 1rem; color: #cbd5e1; display: flex; flex-direction: column; gap: 8px; }
         .script-meta i { color: #22d3ee; width: 22px; }
         .code-container {
@@ -235,21 +210,16 @@
         .code-text { font-family: 'Consolas', 'Courier New', monospace; font-size: 0.9rem; color: #34d399; overflow-x: auto; white-space: nowrap; width: 100%; padding-bottom: 4px; }
         .code-text::-webkit-scrollbar { height: 5px; }
         .code-text::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-        
         .btn-copy, .btn-action {
             background: #1e293b; border: 1px solid rgba(255, 255, 255, 0.05); color: #cbd5e1; padding: 12px 16px; border-radius: 10px; cursor: pointer; transition: all 0.25s ease; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: 600;
         }
         .btn-copy:hover, .btn-action:hover { background: #22d3ee; color: #020617; border-color: #22d3ee; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(34, 211, 238, 0.3); }
         .btn-copy.copied { background: #10b981; color: #020617; border-color: #10b981; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
-        
         .script-divider { border: 0; height: 1px; background: rgba(255, 255, 255, 0.06); margin: 25px 0 20px 0; }
-        
         .script-links { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 20px; }
         .script-links a { color: #22d3ee; text-decoration: none; font-size: 0.98rem; display: flex; align-items: center; gap: 10px; width: max-content; transition: color 0.2s; }
         .script-links a:hover { color: #67e8f9; text-decoration: underline; }
-
         .viewer-container { display: flex; flex-direction: column; gap: 16px; }
-        
         .lua-textarea {
             width: 100%; height: 160px; background: #020617; border: 1px solid rgba(255, 255, 255, 0.04);
             border-radius: 14px; padding: 16px; color: #e0f7fa; font-family: 'Consolas', 'Courier New', monospace;
@@ -257,17 +227,13 @@
             box-shadow: inset 0 4px 12px rgba(0,0,0,0.6);
         }
         .lua-textarea:focus { border-color: #22d3ee; box-shadow: 0 0 16px rgba(6, 182, 212, 0.15), inset 0 4px 12px rgba(0,0,0,0.6); }
-        
         .viewer-controls { display: flex; gap: 12px; justify-content: flex-end; }
         .btn-clear { background: rgba(239, 68, 68, 0.1); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.2); }
         .btn-clear:hover { background: #ef4444; color: white; border-color: #ef4444; }
-        
         .btn-enc { background: linear-gradient(135deg, #7c3aed, #6d28d9); color: white; border: 1px solid rgba(139, 92, 246, 0.2); box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2); }
         .btn-enc:hover { background: linear-gradient(135deg, #8b5cf6, #7c3aed); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4); }
-
         .simulation-title { margin-top: 20px; font-size: 0.98rem; color: #94a3b8; display: flex; align-items: center; gap: 8px;}
         .sim-text { color: #cbd5e1; font-size: 0.88rem; margin: 4px 0; line-height: 1.5; }
-
         .shop-card {
             background: linear-gradient(145deg, #1e1b4b, #0f172a);
             border: 1px solid rgba(99, 102, 241, 0.3);
@@ -280,528 +246,205 @@
             gap: 12px;
             border-left: 5px solid #6366f1;
         }
-        .shop-title {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #f1f5f9;
-        }
-        .shop-price {
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: #10b981;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            text-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
-        }
-        .shop-badge {
-            background: rgba(99, 102, 241, 0.2);
-            color: #818cf8;
-            padding: 4px 10px;
-            border-radius: 8px;
-            font-size: 0.78rem;
-            font-weight: 600;
-            width: max-content;
-            text-transform: uppercase;
-            border: 1px solid rgba(99, 102, 241, 0.3);
-        }
-        .btn-order {
-            background: linear-gradient(135deg, #2563eb, #1d4ed8);
-            color: white;
-            padding: 14px;
-            border: none;
-            border-radius: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-            margin-top: 8px;
-        }
-        .btn-order:hover {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5);
-        }
-
-        .search-container {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-        .search-input {
-            flex: 1;
-            background: #020617;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 14px;
-            padding: 14px 18px;
-            color: #f1f5f9;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s;
-        }
-        .search-input:focus {
-            border-color: #22d3ee;
-            box-shadow: 0 0 14px rgba(6, 182, 212, 0.2);
-        }
-        .btn-search {
-            background: linear-gradient(135deg, #06b6d4, #0891b2);
-            color: #020617;
-            border: none;
-            padding: 0 24px;
-            border-radius: 14px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.25s;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .btn-search:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(6, 182, 212, 0.4);
-        }
-        .loader {
-            display: none;
-            text-align: center;
-            padding: 20px;
-            color: #22d3ee;
-            font-size: 1.2rem;
-        }
-
-        .results-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-top: 10px;
-        }
-        .result-item {
-            background: #020617;
-            border: 1px solid rgba(255, 255, 255, 0.04);
-            border-radius: 16px;
-            padding: 20px;
-            animation: cubicBezierFadeIn 0.4s ease-out forwards;
-            transition: border-color 0.2s;
-        }
-        .result-item:hover {
-            border-color: rgba(6, 182, 212, 0.3);
-        }
-        .result-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-        .result-title a {
-            color: #22d3ee;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .result-title a:hover {
-            color: #67e8f9;
-            text-decoration: underline;
-        }
-        .result-url {
-            font-size: 0.82rem;
-            color: #10b981;
-            margin-bottom: 10px;
-            word-break: break-all;
-            display: block;
-        }
-        .result-snippet {
-            font-size: 0.92rem;
-            color: #cbd5e1;
-            line-height: 1.6;
-        }
-
+        .shop-title { font-size: 1.25rem; font-weight: 700; color: #f1f5f9; }
+        .shop-price { font-size: 1.4rem; font-weight: 800; color: #10b981; display: flex; align-items: center; gap: 6px; text-shadow: 0 0 10px rgba(16, 185, 129, 0.2); }
+        .shop-badge { background: rgba(99, 102, 241, 0.2); color: #818cf8; padding: 4px 10px; border-radius: 8px; font-size: 0.78rem; font-weight: 600; width: max-content; text-transform: uppercase; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .btn-order { background: linear-gradient(135deg, #2563eb, #1d4ed8); color: white; padding: 14px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px; transition: all 0.25s ease; box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3); margin-top: 8px; }
+        .btn-order:hover { background: linear-gradient(135deg, #3b82f6, #2563eb); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.5); }
+        .search-container { display: flex; gap: 10px; margin-bottom: 24px; }
+        .search-input { flex: 1; background: #020617; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 14px 18px; color: #f1f5f9; font-size: 1rem; outline: none; transition: all 0.3s; }
+        .search-input:focus { border-color: #22d3ee; box-shadow: 0 0 14px rgba(6, 182, 212, 0.2); }
+        .btn-search { background: linear-gradient(135deg, #06b6d4, #0891b2); color: #020617; border: none; padding: 0 24px; border-radius: 14px; font-size: 1rem; font-weight: 700; cursor: pointer; transition: all 0.25s; display: flex; align-items: center; gap: 8px; }
+        .btn-search:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(6, 182, 212, 0.4); }
+        .loader { display: none; text-align: center; padding: 20px; color: #22d3ee; font-size: 1.2rem; }
+        .results-wrapper { display: flex; flex-direction: column; gap: 16px; margin-top: 10px; }
+        .result-item { background: #020617; border: 1px solid rgba(255, 255, 255, 0.04); border-radius: 16px; padding: 20px; animation: cubicBezierFadeIn 0.4s ease-out forwards; transition: border-color 0.2s; }
+        .result-item:hover { border-color: rgba(6, 182, 212, 0.3); }
+        .result-title { font-size: 1.15rem; font-weight: 700; margin-bottom: 6px; }
+        .result-title a { color: #22d3ee; text-decoration: none; transition: color 0.2s; }
+        .result-title a:hover { color: #67e8f9; text-decoration: underline; }
+        .result-url { font-size: 0.82rem; color: #10b981; margin-bottom: 10px; word-break: break-all; display: block; }
+        .result-snippet { font-size: 0.92rem; color: #cbd5e1; line-height: 1.6; }
         .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(2, 6, 23, 0.6); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); z-index: 98; display: none; }
         .overlay.active { display: block; }
-
+        .proxy-card {
+            background: rgba(2, 6, 23, 0.6);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 10px;
+        }
+        .proxy-item {
+            background: #020617;
+            padding: 16px;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            border-left: 4px solid #22d3ee;
+        }
+        .proxy-label {
+            color: #22d3ee;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        .proxy-value {
+            color: #f1f5f9;
+            font-family: monospace;
+            font-size: 1rem;
+            word-break: break-all;
+        }
         @keyframes cubicBezierFadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="brand"><i class="fa-solid fa-screwdriver-wrench"></i> AditzMods</div>
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav>
-
-    <div class="overlay" id="overlay"></div>
-    <div class="sidebar" id="sidebar">
-        <ul class="sidebar-menu">
-            <li><a onclick="showContent('real')"><i class="fa-solid fa-user-check"></i> Real AditzMods</a></li>
-            <li><a onclick="showContent('whats')"><i class="fa-solid fa-circle-info"></i> Whats AditzMods</a></li>
-            <li><a onclick="showContent('script')"><i class="fa-solid fa-code"></i> AditzMods Script</a></li>
-            <li><a onclick="showContent('orderLua')"><i class="fa-solid fa-basket-shopping"></i> Order Lua Code</a></li>
-            <li><a onclick="showContent('htmlEnc')"><i class="fa-solid fa-shield-halved"></i> HTML Obfuscator</a></li>
-        </ul>
+<nav class="navbar">
+    <div class="brand"><i class="fa-solid fa-screwdriver-wrench"></i> AditzMods</div>
+    <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-
-    <div class="container">
-        
-        <div class="social-section">
-            <a href="https://t.me/aditzmods" target="_blank" class="btn-social telegram">
-                <i class="fa-brands fa-telegram"></i> Main Telegram
-            </a>
-            
-            <a href="https://wa.me/6281973858680" target="_blank" class="btn-social whatsapp">
-                <i class="fa-brands fa-whatsapp"></i> Admin WhatsApp
-            </a>
-            
-            <a href="https://youtube.com/@aditzmods" target="_blank" class="btn-social youtube">
-                <i class="fa-brands fa-youtube"></i> Main YouTube
-            </a>
-
-            <a href="https://youtube.com/@adityabrr" target="_blank" class="btn-social youtube-backup">
-                <i class="fa-brands fa-youtube"></i> Backup YouTube
-            </a>
-        </div>
-
-        <hr style="border: 0; height: 1px; background: rgba(255, 255, 255, 0.06); margin: 25px 0;">
-
-        <div id="realContent" class="content-box active-box">
-            <h2><i class="fa-solid fa-user-check"></i> Real AditzMods</h2>
-            <div class="real-info">
-                <i class="fa-solid fa-gamepad" style="color: #22d3ee; margin-right: 5px;"></i> Roblox Account : <br>
-                <strong>NAME : ADITZMODS</strong> <br>
-                <strong>USERNAME : @ADITZJND</strong>
-                <span class="highlight-text">Real Name : AdityaJanuadi</span>
-            </div>
-        </div>
-
-        <div id="whatsContent" class="content-box">
-            <h2><i class="fa-solid fa-circle-info"></i> Whats AditzMods</h2>
-            <div class="whats-info">
-                <p><strong>AditzMods</strong> is a developer hub specializing in creating and modifying optimized <span class="tag-script">Roblox Scripts</span>.</p>
-                <p>Real Name Is AdityaJanuadi,life in bali Indonesia. my age is 11 years old REAL!!</p>
-            </div>
-        </div>
-
-        <div id="scriptContent" class="content-box">
-            <h2><i class="fa-solid fa-code"></i> AditzMods Script V11</h2>
-            <div class="script-meta">
-                <div><i class="fa-solid fa-code-branch"></i> <strong>Version:</strong> 11.00</div>
-                <div><i class="fa-solid fa-comment-dots"></i> Send feedback via Telegram.</div>
-            </div>
-            
-            <div class="code-container">
-                <div class="code-text" id="scriptCode">loadstring(game:HttpGet("https://pastebin.com/raw/TH201m42", true))()</div>
-                <button class="btn-copy" id="btnCopy" onclick="copyScript('scriptCode', 'btnCopy', 'copyIcon')" title="Copy Code">
-                    <i class="fa-solid fa-copy" id="copyIcon"></i>
-                </button>
-            </div>
-
-            <div class="script-divider"></div>
-
-            <h2><i class="fa-solid fa-fire-flame-curved"></i> AditzMods Script V12</h2>
-            <div class="script-meta">
-                <div><i class="fa-solid fa-code-branch"></i> <strong>Version:</strong> 12.00 (Latest)</div>
-                <div><i class="fa-solid fa-bolt"></i> All Bug Fixed</div>
-            </div>
-            
-            <div class="code-container">
-                <div class="code-text" id="scriptV12Code">loadstring(game:HttpGet("https://pastebin.com/raw/asLLHJi2"))()</div>
-                <button class="btn-copy" id="btnCopyV12" onclick="copyScript('scriptV12Code', 'btnCopyV12', 'copyIconV12')" title="Copy Code">
-                    <i class="fa-solid fa-copy" id="copyIconV12"></i>
-                </button>
-            </div>
-
-            <div class="script-divider"></div>
-
-            <h2><i class="fa-solid fa-key"></i> Free Private Server Free Rename</h2>
-            <div class="script-meta">
-                <div><i class="fa-solid fa-circle-check"></i> <strong>Status:</strong> Active / Free Access</div>
-                <div><i class="fa-solid fa-server"></i> Teleport To Free Private Server</div>
-            </div>
-            
-            <div class="code-container">
-                <div class="code-text" id="scriptPrivateCode">loadstring(game:HttpGet("https://pastebin.com/raw/rLMFhC8n", true))()</div>
-                <button class="btn-copy" id="btnCopyPrivate" onclick="copyScript('scriptPrivateCode', 'btnCopyPrivate', 'copyIconPrivate')" title="Copy Code">
-                    <i class="fa-solid fa-copy" id="copyIconPrivate"></i>
-                </button>
-            </div>
-
-            <div class="script-links">
-                <a href="https://deltaexploits.gg" target="_blank"><i class="fa-solid fa-download"></i> Delta Apk : deltaexploits.gg</a>
-                <a href="https://t.me/aditzmods" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram Channel : @aditzmods</a>
-            </div>
-        </div>
-
-        <div id="deepSearchContent" class="content-box">
-            <h2><i class="fa-solid fa-magnifying-glass"></i> DeepSearch Engine</h2>
-            <div class="search-container">
-                <input type="text" id="searchQueryInput" class="search-input" placeholder="Search anything on the web...">
-                <button class="btn-search" onclick="executeDeepSearch()"><i class="fa-solid fa-search"></i> Search</button>
-            </div>
-            
-            <div class="loader" id="searchLoader"><i class="fa-solid fa-circle-notch fa-spin"></i> Analyzing Web Databases...</div>
-
-            <div class="results-wrapper" id="searchResultsArea"></div>
-        </div>
-
-        <div id="orderLuaContent" class="content-box">
-            <h2><i class="fa-solid fa-basket-shopping"></i> Order Lua Code</h2>
-            <div class="shop-card">
-                <div class="shop-badge">Premium Script</div>
-                <div class="shop-title">AditzMods V11 Lua Code No Enc Full</div>
-                <div class="shop-price"><i class="fa-solid fa-tags" style="font-size: 1.1rem;"></i> Rp8.000</div>
-                <p class="sim-text" style="color: #94a3b8; font-size: 0.85rem;">Dapatkan full source code tanpa enkripsi, performa ringan, eksekusi lancar, dan fitur premium terlengkap.</p>
-                <a href="https://t.me/dominoinv" target="_blank" class="btn-order">
-                    <i class="fa-brands fa-telegram" style="font-size: 1.2rem;"></i> Order Now
-                </a>
-            </div>
-        </div>
-
-        <div id="htmlEncContent" class="content-box">
-            <h2><i class="fa-solid fa-shield-halved"></i> HTML Obfuscator Encoder</h2>
-            <div class="viewer-container">
-                <p class="sim-text" style="color: #94a3b8; margin-bottom: 5px;">Secure your raw HTML/JS source code so people can't just copy-paste it instantly.</p>
-                
-                <textarea class="lua-textarea" id="htmlInput" style="color: #f472b6; height: 140px;" placeholder=""></textarea>
-                
-                <div class="viewer-controls">
-                    <button class="btn-action btn-clear" onclick="clearHtml()"><i class="fa-solid fa-trash-can"></i> Reset</button>
-                    <button class="btn-action btn-enc" onclick="encryptHTML()"><i class="fa-solid fa-lock"></i> Encrypt HTML</button>
-                </div>
-
-                <div class="simulation-title">
-                    <i class="fa-solid fa-code" style="color: #a78bfa;"></i> <span>Encrypted Output Result</span>
-                </div>
-                
-                <div class="code-container" style="margin-top: 10px;">
-                    <div class="code-text" id="htmlOutput" style="color: #c084fc; max-height: 120px; overflow-y: auto; white-space: pre-wrap; word-break: break-all;"></div>
-                    <button class="btn-copy" id="btnCopyHtml" onclick="copyEncryptedHtml()" title="Copy Encrypted Code">
-                        <i class="fa-solid fa-copy" id="copyIconHtml"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
+</nav>
+<div class="overlay" id="overlay"></div>
+<div class="sidebar" id="sidebar">
+    <ul class="sidebar-menu">
+        <li><a onclick="showContent('real')"><i class="fa-solid fa-user-check"></i> Real AditzMods</a></li>
+        <li><a onclick="showContent('whats')"><i class="fa-solid fa-circle-info"></i> Whats AditzMods</a></li>
+        <li><a onclick="showContent('script')"><i class="fa-solid fa-code"></i> AditzMods Script</a></li>
+        <li><a onclick="showContent('orderLua')"><i class="fa-solid fa-basket-shopping"></i> Order Lua Code</a></li>
+        <li><a onclick="showContent('htmlEnc')"><i class="fa-solid fa-shield-halved"></i> HTML Obfuscator</a></li>
+        <li><a onclick="showContent('antiban')"><i class="fa-solid fa-shield-halved"></i> Antiban Proxies</a></li>
+    </ul>
+</div>
+<div class="container">
+    <div class="social-section">
+        <a href="https://t.me/aditzmods" target="_blank" class="btn-social telegram"><i class="fa-brands fa-telegram"></i> Main Telegram</a>
+        <a href="https://wa.me/6281973858680" target="_blank" class="btn-social whatsapp"><i class="fa-brands fa-whatsapp"></i> Admin WhatsApp</a>
+        <a href="https://youtube.com/@aditzmods" target="_blank" class="btn-social youtube"><i class="fa-brands fa-youtube"></i> Main YouTube</a>
+        <a href="https://youtube.com/@adityabrr" target="_blank" class="btn-social youtube-backup"><i class="fa-brands fa-youtube"></i> Backup YouTube</a>
     </div>
-
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('overlay');
-
-        let rawEncryptedOutputText = "";
-
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
-            sidebar.classList.toggle('active');
-            overlay.classList.toggle('active');
-        });
-
-        overlay.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-
-        function showContent(menuType) {
-            document.getElementById('realContent').classList.remove('active-box');
-            document.getElementById('whatsContent').classList.remove('active-box');
-            document.getElementById('scriptContent').classList.remove('active-box');
-            document.getElementById('orderLuaContent').classList.remove('active-box');
-            document.getElementById('htmlEncContent').classList.remove('active-box');
-            
-            const links = document.querySelectorAll('.sidebar-menu a');
-            links.forEach(link => link.classList.remove('active-menu'));
-
-            if(menuType === 'real') {
-                document.getElementById('realContent').classList.add('active-box');
-            } else if(menuType === 'whats') {
-                document.getElementById('whatsContent').classList.add('active-box');
-            } else if(menuType === 'script') {
-                document.getElementById('scriptContent').classList.add('active-box');
-            } else if(menuType === 'deepSearch') {
-                document.getElementById('deepSearchContent').classList.add('active-box');
-            } else if(menuType === 'orderLua') {
-                document.getElementById('orderLuaContent').classList.add('active-box');
-            } else if(menuType === 'htmlEnc') {
-                document.getElementById('htmlEncContent').classList.add('active-box');
-            }
-
-            window.event.currentTarget.classList.add('active-menu');
-            
-            menuToggle.classList.remove('active');
-            sidebar.classList.remove('active');
-            overlay.classList.remove('active');
-        }
-
-        function copyScript(elementId, btnId, iconId) {
-            const scriptText = document.getElementById(elementId).innerText;
-            const btnCopy = document.getElementById(btnId);
-            const copyIcon = document.getElementById(iconId);
-
-            const tempTextArea = document.createElement('textarea');
-            tempTextArea.value = scriptText;
-            tempTextArea.style.position = 'absolute';
-            tempTextArea.style.left = '-9999px';
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
-
-            try {
-                if (navigator.clipboard && window.isSecureContext) {
-                    navigator.clipboard.writeText(scriptText);
-                } else {
-                    document.execCommand('copy');
-                }
-
-                btnCopy.classList.add('copied');
-                copyIcon.className = 'fa-solid fa-check';
-                setTimeout(() => {
-                    btnCopy.classList.remove('copied');
-                    copyIcon.className = 'fa-solid fa-copy';
-                }, 2000);
-            } catch (err) {
-                alert('Failed to copy text.');
-            }
-
-            document.body.removeChild(tempTextArea);
-        }
-
-        function clearHtml() {
-            document.getElementById('htmlInput').value = '';
-            document.getElementById('htmlOutput').innerText = '';
-            rawEncryptedOutputText = "";
-        }
-
-        function encryptHTML() {
-            const rawHtml = document.getElementById('htmlInput').value.trim();
-            if(!rawHtml) {
-                rawEncryptedOutputText = "";
-                return;
-            }
-
-            let encryptedString = "";
-            for (let i = 0; i < rawHtml.length; i++) {
-                encryptedString += "%" + rawHtml.charCodeAt(i).toString(16).toUpperCase();
-            }
-
-            const finalObfuscatedCode = `<script>document.write(unescape('${encryptedString}'));<\/script>`;
-            
-            document.getElementById('htmlOutput').innerText = finalObfuscatedCode;
-            rawEncryptedOutputText = finalObfuscatedCode;
-        }
-
-        function copyEncryptedHtml() {
-            if (!rawEncryptedOutputText) {
-                return;
-            }
-
-            const btnCopy = document.getElementById('btnCopyHtml');
-            const copyIcon = document.getElementById('copyIconHtml');
-
-            const storageTextArea = document.createElement('textarea');
-            storageTextArea.value = rawEncryptedOutputText;
-            storageTextArea.setAttribute('readonly', '');
-            storageTextArea.style.position = 'absolute';
-            storageTextArea.style.left = '-9999px';
-            document.body.appendChild(storageTextArea);
-            
-            storageTextArea.select();
-            storageTextArea.setSelectionRange(0, 99999);
-
-            try {
-                if (navigator.clipboard && window.isSecureContext) {
-                    navigator.clipboard.writeText(rawEncryptedOutputText);
-                } else {
-                    document.execCommand('copy');
-                }
-                
-                btnCopy.classList.add('copied');
-                copyIcon.className = 'fa-solid fa-check';
-                setTimeout(() => {
-                    btnCopy.classList.remove('copied');
-                    copyIcon.className = 'fa-solid fa-copy';
-                }, 2000);
-            } catch (err) {
-                alert('Failed to copy code.');
-            }
-
-            document.body.removeChild(storageTextArea);
-        }
-
-        async function executeDeepSearch() {
-            const query = document.getElementById('searchQueryInput').value.trim();
-            const loader = document.getElementById('searchLoader');
-            const resultsArea = document.getElementById('searchResultsArea');
-
-            if (!query) {
-                alert('Please enter a keyword to search!');
-                return;
-            }
-
-            loader.style.display = 'block';
-            resultsArea.innerHTML = '';
-
-            const proxy = "https://corsproxy.io/?";
-            const targetUrl = `https://html.duckduckgo.com/html/?q=${encodeURIComponent(query)}`;
-
-            try {
-                const response = await fetch(`${proxy}${encodeURIComponent(targetUrl)}`);
-                const htmlText = await response.text();
-
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(htmlText, 'text/html');
-                const links = doc.querySelectorAll('.links_main');
-
-                if (!links || links.length === 0) {
-                    resultsArea.innerHTML = '<div style="text-align:center; color:#94a3b8; padding:20px;">No results found. Try another query.</div>';
-                    loader.style.display = 'none';
-                    return;
-                }
-
-                let resultsCount = 0;
-                links.forEach((linkNode) => {
-                    if (resultsCount >= 7) return;
-
-                    const titleAnchor = linkNode.querySelector('.result__title a');
-                    const snippetNode = linkNode.nextElementSibling ? linkNode.nextElementSibling.querySelector('.result__snippet') : null;
-
-                    if (titleAnchor) {
-                        let title = titleAnchor.innerText;
-                        let rawUrl = titleAnchor.getAttribute('href');
-
-                        if (rawUrl.includes('uddg=')) {
-                            rawUrl = decodeURIComponent(rawUrl.split('uddg=')[1].split('&')[0]);
-                        }
-
-                        const snippet = snippetNode ? snippetNode.innerText : "No description available for this reference link.";
-
-                        const itemHtml = `
-                            <div class="result-item">
-                                <div class="result-title"><a href="${rawUrl}" target="_blank">${title}</a></div>
-                                <span class="result-url">${rawUrl}</span>
-                                <div class="result-snippet">${snippet}</div>
-                            </div>
-                        `;
-                        resultsArea.innerHTML += itemHtml;
-                        resultsCount++;
-                    }
-                });
-
-                if (resultsCount === 0) {
-                    resultsArea.innerHTML = '<div style="text-align:center; color:#94a3b8; padding:20px;">No data indexed for this specific query.</div>';
-                }
-
-            } catch (err) {
-                console.error(err);
-                resultsArea.innerHTML = '<div style="text-align:center; color:#ef4444; padding:20px;">DeepSearch Node timeout. Please re-try in a moment.</div>';
-            } finally {
-                loader.style.display = 'none';
-            }
-        }
-    </script>
+    <hr style="border: 0; height: 1px; background: rgba(255, 255, 255, 0.06); margin: 25px 0;">
+    <div id="realContent" class="content-box active-box">
+        <h2><i class="fa-solid fa-user-check"></i> Real AditzMods</h2>
+        <div class="real-info"><i class="fa-solid fa-gamepad" style="color: #22d3ee; margin-right: 5px;"></i> Roblox Account : <br><strong>@BIDDEN77</strong> <br><strong>@ADITZJND</strong><span class="highlight-text">👆 This Is Real!!</span></div>
+    </div>
+    <div id="whatsContent" class="content-box">
+        <h2><i class="fa-solid fa-circle-info"></i> Whats AditzMods</h2>
+        <div class="whats-info"><p><strong>AditzMods</strong> is a developer hub specializing in creating and modifying optimized <span class="tag-script">Roblox Scripts</span>.</p><p>Our main focus is delivering high-performance, clean scripts to execute custom mechanics flawlessly inside Roblox, ensuring a smooth and responsive modding experience.</p></div>
+    </div>
+    <div id="scriptContent" class="content-box">
+        <h2><i class="fa-solid fa-code"></i> AditzMods Script V11</h2>
+        <div class="script-meta"><div><i class="fa-solid fa-code-branch"></i> <strong>Version:</strong> 11.00</div><div><i class="fa-solid fa-comment-dots"></i> Send feedback via Telegram.</div></div>
+        <div class="code-container"><div class="code-text" id="scriptCode">loadstring(game:HttpGet("https://pastebin.com/raw/TH201m42", true))()</div><button class="btn-copy" onclick="copyScript('scriptCode', this)"><i class="fa-solid fa-copy"></i></button></div>
+        <div class="script-divider"></div>
+        <h2><i class="fa-solid fa-fire-flame-curved"></i> AditzMods Script V12</h2>
+        <div class="script-meta"><div><i class="fa-solid fa-code-branch"></i> <strong>Version:</strong> 12.00 (Latest)</div><div><i class="fa-solid fa-bolt"></i> High performance compilation interface.</div></div>
+        <div class="code-container"><div class="code-text" id="scriptV12Code">loadstring(game:HttpGet("https://pastebin.com/raw/asLLHJi2"))()</div><button class="btn-copy" onclick="copyScript('scriptV12Code', this)"><i class="fa-solid fa-copy"></i></button></div>
+        <div class="script-divider"></div>
+        <h2><i class="fa-solid fa-key"></i> Free Private Server Free Rename</h2>
+        <div class="script-meta"><div><i class="fa-solid fa-circle-check"></i> <strong>Status:</strong> Active / Free Access</div><div><i class="fa-solid fa-server"></i> Custom Private Server Utilities.</div></div>
+        <div class="code-container"><div class="code-text" id="scriptPrivateCode">loadstring(game:HttpGet("https://pastebin.com/raw/rLMFhC8n", true))()</div><button class="btn-copy" onclick="copyScript('scriptPrivateCode', this)"><i class="fa-solid fa-copy"></i></button></div>
+        <div class="script-links"><a href="https://deltaexploits.gg" target="_blank"><i class="fa-solid fa-download"></i> Delta Apk : deltaexploits.gg</a><a href="https://t.me/aditzmods" target="_blank"><i class="fa-brands fa-telegram"></i> Telegram Channel : @aditzmods</a></div>
+    </div>
+    <div id="orderLuaContent" class="content-box">
+        <h2><i class="fa-solid fa-basket-shopping"></i> Order Lua Code</h2>
+        <div class="shop-card"><div class="shop-badge">Premium Script</div><div class="shop-title">AditzMods V11 Lua Code No Enc Full</div><div class="shop-price"><i class="fa-solid fa-tags" style="font-size: 1.1rem;"></i> Rp8.000</div><p class="sim-text" style="color: #94a3b8; font-size: 0.85rem;">Dapatkan full source code tanpa enkripsi, performa ringan, eksekusi lancar, dan fitur premium terlengkap.</p><a href="https://t.me/dominoinv" target="_blank" class="btn-order"><i class="fa-brands fa-telegram" style="font-size: 1.2rem;"></i> Order Now</a></div>
+    </div>
+    <div id="htmlEncContent" class="content-box">
+        <h2><i class="fa-solid fa-shield-halved"></i> HTML Obfuscator Encoder</h2>
+        <div class="viewer-container"><textarea class="lua-textarea" id="htmlInput" style="color: #f472b6; height: 140px;" placeholder=""></textarea><div class="viewer-controls"><button class="btn-action btn-clear" onclick="clearHtml()"><i class="fa-solid fa-trash-can"></i> Reset</button><button class="btn-action btn-enc" onclick="encryptHTML()"><i class="fa-solid fa-lock"></i> Encrypt HTML</button></div><div class="simulation-title"><i class="fa-solid fa-code" style="color: #a78bfa;"></i> <span>Encrypted Output Result</span></div><div class="code-container"><div class="code-text" id="htmlOutput" style="color: #c084fc; max-height: 120px; overflow-y: auto; white-space: pre-wrap; word-break: break-all;"></div><button class="btn-copy" onclick="copyEncryptedHtml()"><i class="fa-solid fa-copy"></i></button></div></div>
+    </div>
+    <div id="antibanContent" class="content-box">
+        <h2><i class="fa-solid fa-shield-halved"></i> Antiban Proxies</h2>
+        <div class="proxy-card">
+            <div class="proxy-item">
+                <div class="proxy-label"><i class="fa-solid fa-server"></i> Proxy Server</div>
+                <div class="proxy-value">198.105.121.200</div>
+            </div>
+            <div class="proxy-item">
+                <div class="proxy-label"><i class="fa-solid fa-user"></i> Username</div>
+                <div class="proxy-value">AditzMods</div>
+            </div>
+            <div class="proxy-item">
+                <div class="proxy-label"><i class="fa-solid fa-key"></i> Password</div>
+                <div class="proxy-value">AditzMods</div>
+            </div>
+            <div class="sim-text" style="margin-top: 16px; text-align: center; color: #22d3ee;">Use these credentials for secure proxy connection</div>
+        </div>
+    </div>
+</div>
+<script>
+    let rawEncryptedOutputText = "";
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); sidebar.classList.toggle('active'); overlay.classList.toggle('active'); });
+    overlay.addEventListener('click', () => { menuToggle.classList.remove('active'); sidebar.classList.remove('active'); overlay.classList.remove('active'); });
+    function showContent(menuType) {
+        document.getElementById('realContent').classList.remove('active-box');
+        document.getElementById('whatsContent').classList.remove('active-box');
+        document.getElementById('scriptContent').classList.remove('active-box');
+        document.getElementById('orderLuaContent').classList.remove('active-box');
+        document.getElementById('htmlEncContent').classList.remove('active-box');
+        document.getElementById('antibanContent').classList.remove('active-box');
+        if(menuType === 'real') document.getElementById('realContent').classList.add('active-box');
+        else if(menuType === 'whats') document.getElementById('whatsContent').classList.add('active-box');
+        else if(menuType === 'script') document.getElementById('scriptContent').classList.add('active-box');
+        else if(menuType === 'orderLua') document.getElementById('orderLuaContent').classList.add('active-box');
+        else if(menuType === 'htmlEnc') document.getElementById('htmlEncContent').classList.add('active-box');
+        else if(menuType === 'antiban') document.getElementById('antibanContent').classList.add('active-box');
+        document.querySelectorAll('.sidebar-menu a').forEach(link => link.classList.remove('active-menu'));
+        if(window.event && window.event.currentTarget) window.event.currentTarget.classList.add('active-menu');
+        menuToggle.classList.remove('active'); sidebar.classList.remove('active'); overlay.classList.remove('active');
+    }
+    function copyScript(elementId, btn) {
+        const scriptText = document.getElementById(elementId).innerText;
+        const tempTextArea = document.createElement('textarea');
+        tempTextArea.value = scriptText;
+        tempTextArea.style.position = 'absolute';
+        tempTextArea.style.left = '-9999px';
+        document.body.appendChild(tempTextArea);
+        tempTextArea.select();
+        try {
+            if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(scriptText);
+            else document.execCommand('copy');
+            btn.classList.add('copied');
+            btn.innerHTML = '<i class="fa-solid fa-check"></i>';
+            setTimeout(() => { btn.classList.remove('copied'); btn.innerHTML = '<i class="fa-solid fa-copy"></i>'; }, 2000);
+        } catch (err) { alert('Failed to copy text.'); }
+        document.body.removeChild(tempTextArea);
+    }
+    function clearHtml() { document.getElementById('htmlInput').value = ''; document.getElementById('htmlOutput').innerText = ''; rawEncryptedOutputText = ""; }
+    function encryptHTML() {
+        const rawHtml = document.getElementById('htmlInput').value.trim();
+        if(!rawHtml) { rawEncryptedOutputText = ""; document.getElementById('htmlOutput').innerText = ''; return; }
+        let encryptedString = "";
+        for (let i = 0; i < rawHtml.length; i++) encryptedString += "%" + rawHtml.charCodeAt(i).toString(16).toUpperCase();
+        const finalObfuscatedCode = `<script>document.write(unescape('${encryptedString}'));<\/script>`;
+        document.getElementById('htmlOutput').innerText = finalObfuscatedCode;
+        rawEncryptedOutputText = finalObfuscatedCode;
+    }
+    function copyEncryptedHtml() {
+        if (!rawEncryptedOutputText) return;
+        const btnCopy = document.getElementById('btnCopyHtml');
+        const storageTextArea = document.createElement('textarea');
+        storageTextArea.value = rawEncryptedOutputText;
+        storageTextArea.style.position = 'absolute';
+        storageTextArea.style.left = '-9999px';
+        document.body.appendChild(storageTextArea);
+        storageTextArea.select();
+        try {
+            if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(rawEncryptedOutputText);
+            else document.execCommand('copy');
+            alert('Encrypted code copied!');
+        } catch (err) { alert('Failed to copy code.'); }
+        document.body.removeChild(storageTextArea);
+    }
+    window.showContent = showContent;
+    window.copyScript = copyScript;
+    window.clearHtml = clearHtml;
+    window.encryptHTML = encryptHTML;
+    window.copyEncryptedHtml = copyEncryptedHtml;
+</script>
 </body>
-  </html>
+                </html>
